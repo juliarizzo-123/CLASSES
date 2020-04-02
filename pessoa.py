@@ -25,26 +25,44 @@ class Humano(object):
         self.peso = peso
         self.altura = altura
 
-    def envelhecer(self):
-        self.idade(int(input('Quanto anos voce quer envlhecer: ')))
-        self.idade = self.idade + self.idade
 
-    def engordar(self):
-        self.peso(int(input("Quanto voce quer engordar: ")))
-        self.peso =  self.peso + self.peso
+    def envelhecer(self,anos):
+        self.i=0
+        for self.i in range(anos):
+            if(anos<=21):
+                self.y=+1         
+                self.idade = +1
+                self.altura=0.5*self.y+self.altura
+            
+            else:
+                self.idade = self.idade + anos
+  
 
-    def emagrecer(self):
-        self.peso = (int(input("Quanto voce quer emagecer: ")))
-        self.peso =  self.peso + self.peso
+    def engordar(self,kg):
+        self.peso =  self.peso + kg
+        
 
-    def crescer(self):
-        self.altura = (int(input("Quanto  voce quer crescer")))
-        self.altura =  self.altura + self.altura
+    def emagrecer(self,kg):
+        self.peso =  self.peso - kg
+       
+
+
+    def crescer(self,cm):
+        self.altura =  self.altura + cm
+        
+
     
-
+    def getNome(self):
+        return self.nome
+    def getIdade(self):
+        return self.idade
+    def getPeso(self):
+        return self.peso
+    def getAltura(self):
+        return self.altura
 
    # def info(self):
-    #    print("O nome : {}".format(self.nome))
-     #   print("A idade: {}".format(self.idade))
-      #  print("O peso : {} Kg".format(self.peso))
-       # print("A altura: {} cm".format(self.altura))
+    #   print("O nome : {}".format(self.nome))
+     #  print("A idade: {}".format(self.idade))
+      # print("O peso : {} Kg".format(self.peso))
+       #print("A altura: {} cm".format(self.altura))
